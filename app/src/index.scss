@@ -1,0 +1,141 @@
+$primary-colour: rgb(0, 255, 106);
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+ol,
+ul {
+    padding-left: 30px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+.navbar {
+    padding: 10px;
+}
+
+.componentWindow {
+    padding: 10px;
+    border: 4px solid greenyellow;
+    min-width: 303px;
+}
+
+.formLabelArea {
+    /* border: 1px solid red; */
+    grid-column-start: 1;
+    padding: 5px;
+}
+
+.formInputArea {
+    /* border: 1px solid green; */
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding: 5px;
+}
+
+.formSubmitArea {
+    /* border: 1px solid blue; */
+    grid-column-start: 4;
+}
+
+.formGridContainer {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr [form-col]);
+    grid-template-rows: auto;
+    grid-template-areas: "label input . submit";
+    padding: 5px;
+}
+
+.dropDownClass {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid red;
+}
+
+.formSubmitArea {
+    justify-self: end;
+    align-self: center;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: [name-start] 1fr [name-end email-start] 1fr [email-end comment-start] 4fr [commend-end];
+    grid-template-rows: auto;
+    grid-template-areas: "name-start email-start comment-start";
+    row-gap: 3px;
+    column-gap: 3px;
+}
+
+.name-area {
+    grid-area: "name-start";
+    background-color: teal;
+}
+
+.email-area {
+    grid-area: "email-start";
+    background-color: skyblue;
+}
+
+.comment-area {
+    grid-area: "commend-start";
+    background-color: rosybrown;
+}
+
+.table-header {
+    background-color: tomato;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+button {
+    background-color: $primary-colour;
+}
